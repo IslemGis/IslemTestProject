@@ -12,7 +12,7 @@
 //
 
 import QtQuick 2.3
-import QtQuick.Controls 1.4
+import QtQuick.Controls 1.3
 import ArcGIS.Runtime 10.26
 import QtQml 2.2
 import QtQuick.LocalStorage 2.0
@@ -21,7 +21,7 @@ import QtQuick.Controls.Styles 1.3
 import FileDownloader 1.0
 //import EnumsMaks 1.0
 import ImageStringConverter 1.0
-import QtQuick.Layouts 1.3
+//import QtQuick.Layouts 1.2
 import QtQuick.Dialogs 1.2
 
 ApplicationWindow {
@@ -55,16 +55,16 @@ ApplicationWindow {
                     graphicsLayer.selectGraphic(gr)
                 })
                 if(graphicIDs.length>1){
-                    //                    var graphic=graphicsLayer.graphic(graphicIDs[0]);
-                    //                    graphic.symbol.xOffset=100;
-                    //                    graphicsLayer.updateGraphic(graphicIDs[0],graphic)
-                    //                    var graphic=graphicsLayer.graphic(graphicIDs[1]);
-                    //                    graphic.symbol.xOffset=-100;
-                    //                    graphicsLayer.updateGraphic(graphicIDs[1],graphic)
+                    //var graphic=graphicsLayer.graphic(graphicIDs[0]);
+                    //graphic.symbol.xOffset=100;
+                    //graphicsLayer.updateGraphic(graphicIDs[0],graphic)
+                    //var graphic=graphicsLayer.graphic(graphicIDs[1]);
+                    //graphic.symbol.xOffset=-100;
+                    //graphicsLayer.updateGraphic(graphicIDs[1],graphic)
 
-                    //                    var graphic=graphicsLayer.graphic(graphicIDs[2]);
-                    //                    graphic.symbol.yOffset=100;
-                    //                    graphicsLayer.updateGraphic(graphicIDs[2],graphic)
+                    //var graphic=graphicsLayer.graphic(graphicIDs[2]);
+                    //graphic.symbol.yOffset=100;
+                    //graphicsLayer.updateGraphic(graphicIDs[2],graphic)
 
                     var angleDraw=360/(graphicIDs.length);
 
@@ -492,7 +492,7 @@ ApplicationWindow {
         visible: false
         Rectangle {
             width: 200
-            Layout.maximumWidth: 400
+            //Layout.maximumWidth: 400
             color: "lightblue"
             Text {
                 text: "View 1"
@@ -501,8 +501,8 @@ ApplicationWindow {
         }
         Rectangle {
             id: centerItem
-            Layout.minimumWidth: 50
-            Layout.fillWidth: true
+            //            Layout.minimumWidth: 50
+            //            Layout.fillWidth: true
             color: "lightgray"
             Text {
                 text: "View 2"
@@ -552,8 +552,11 @@ ApplicationWindow {
         }
     }
 
-    //
-    //
+    Label{
+        id:sss
+        text:"tkokkaaakak"
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
 
     Dialog {
 
