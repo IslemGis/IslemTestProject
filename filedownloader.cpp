@@ -42,7 +42,9 @@ void FileDownloader::getHeaders(QNetworkReply * reply){
 }
 
 
-FileDownloader::~FileDownloader() { }
+FileDownloader::~FileDownloader() { 
+qDebug();
+}
 
 void FileDownloader::fileDownloaded(QNetworkReply* pReply) {
     qDebug()<<"m_fileUrl<<m_fileUrl;"+m_filePath;
